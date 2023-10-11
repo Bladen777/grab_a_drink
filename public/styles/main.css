@@ -1,0 +1,137 @@
+/* defaults */
+body{
+    margin:0;
+}
+
+/* colours */
+:root{
+    --orange: #d9910B;
+    --lt_brown:#a67212;
+    --cream:#d98c4a;
+    --brown: #401a04;
+    --red:#8c2016;
+    }
+
+/* Typography */
+h1, h2, p, li{
+    color:var(--brown);
+}
+
+h1{
+    font-family: 'Lobster', sans-serif;
+    font-size:56px;
+    
+}
+
+h2{
+    margin-top: 0;
+    font-family: 'Archivo', sans-serif;
+    font-size: 32px;
+}
+
+
+p, li, .cen_button{
+    font-family: 'Outfit', sans-serif;
+}
+
+p, li{
+font-size: 20px;
+}
+
+.cen_button{
+    border-color: var(--orange);
+    font-size: 16px;
+    color: var(--cream);
+}
+
+/* layout & Style*/
+
+.container{
+    position: relative;
+    margin:2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color:var(--orange);
+    border-radius: 4rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+.box{
+    display: flex;
+}
+
+.left_box{
+    transition: .75s;
+    grid-column: 1;
+}
+
+.right_box{
+    grid-column: 2;
+    width:30vw;
+    margin:2rem auto ;
+    flex-direction: column;
+  
+    border-radius: 3rem;
+    padding: 2rem;
+
+}
+
+.refresh{
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cen_button{
+    background-color: var(--red);
+    border: solid 5px;
+    border-bottom: none;
+    height: 2rem;
+    width: 10.5rem;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.cen_button:hover{
+    height: 3rem;
+    width:12rem;
+}
+
+.copyright{
+    text-align: center;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    border-bottom-left-radius: 4rem;
+    border-top-left-radius:4rem ;
+}
+
+hr{
+    border:var(--brown) solid 1px;
+
+}
+
+/* media adjustments */
+@media(max-width:800px){
+    .right_box, .left_box{
+        grid-column: 1/3;
+    }
+
+    .right_box{
+        width: auto;
+        margin: 2rem;
+    }
+
+    img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 4rem;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have a drink</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Lobster&family=Outfit:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+<div class="container">
+    <div class="left_box box">    
+        <img src="<%= drink_img %>" alt="drink image" >
+    </div>
+
+    <div class="right_box box">
+        <h1><%= drink_name %><hr></h1>
+        
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p><%= drink_instr %></p>
+        </div>    
+        <div class="ingredients_list">
+            <h2>Ingredients</h2>    
+            <ul id="ingredients_list">
+                <% if (locals.ingredients_amt){  %>
+                    <% ingredients_amt.forEach(item =>{ %>
+            <li><%=item %></li>
+                <% })} %>
+            </ul>
+        </div> 
+    </div>
+    <div class="refresh">
+            <button type="submit" class="cen_button" onclick="window.location.reload()">Grab a new Drink</button>
+    </div>
+</div>
+
+<p class="copyright">©2023 Kowalchuk, Braden</p>
+    
+</body>
+</html>
